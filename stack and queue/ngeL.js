@@ -1,9 +1,9 @@
 // Nearest greter element Left
-let arr = [1,3,2,4];
+let arr = [1, 3, 2, 4];
 let stack = [];
 let result = [];
 
-for(let i = 0 ; i < arr.length ; i++){
+for (let i = 0; i < arr.length; i++) {
 
     //have to check 3 conditions 
     // 1. check stack is empty or not
@@ -12,26 +12,26 @@ for(let i = 0 ; i < arr.length ; i++){
     // 4. after 3rd step if you dont get any stack > arr[i] then stack will be empty and push -1.
 
     // 1st step
-    if(stack.length == 0 ){
+    if (stack.length == 0) {
         result.push(-1);
     }
 
     // 2nd step
-    else if(stack.length > 0 &&stack[stack.length -1 ] > arr[i]){
-        result.push(stack[stack.length -1]);
+    else if (stack.length > 0 && stack[stack.length - 1] > arr[i]) {
+        result.push(stack[stack.length - 1]);
     }
 
     // 3rd step
 
-    else if( stack.length > 0 && stack[stack.length-1] <= arr[i]){
-        while(stack.length > 0 && stack[stack.length-1] <= arr[i]){
+    else if (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
+        while (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
             stack.pop();
         }
-        if(stack.length == 0){
+        if (stack.length == 0) {
             result.push(-1)
         }
-        else{
-            result.push(stack[stack.length -1]);
+        else {
+            result.push(stack[stack.length - 1]);
         }
     }
 
