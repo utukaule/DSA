@@ -5,7 +5,7 @@ let result = [];
 
 
 
-for (let i = arr.length - 1; i > 0; i--) {
+for (let i = arr.length - 1; i >= 0; i--) {
     if (s.length == 0) {
         result.push(-1);
     }
