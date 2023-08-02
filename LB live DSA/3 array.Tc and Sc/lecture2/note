@@ -1,0 +1,6 @@
+vector
+    ->  vector is array whos size is not fixed
+    ->  Default size of vector is 0
+    ->  It doubles the size after filling up
+    ->  initialize
+        ->  vector <int> arr;
